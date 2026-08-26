@@ -27,3 +27,10 @@ Before starting a new feature:
 git checkout develop
 git pull origin develop
 git checkout -b feature/feature-name
+
+Rules
+Do not commit .env files.
+Do not commit API keys or secrets.
+Do not push normal feature work directly to main.
+Pull the latest develop before starting a new feature.
+Keep commits focused and descriptive.
