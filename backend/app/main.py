@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.api.routes import health
+from app.api.routes import health, sessions
 
 app = FastAPI(
     title="NurseFlow API",
@@ -8,7 +8,8 @@ app = FastAPI(
     version="0.1.0",
 )
 
-app.include_router(
-    health.router,
-    prefix="/api/v1",
-)
+# health routes
+app.include_router(health.router, prefix="/api/v1")
+
+# study session routes
+app.include_router(sessions.router, prefix="/api/v1")
